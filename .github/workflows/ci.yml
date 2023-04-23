@@ -1,0 +1,81 @@
+name: 'ci'
+
+on:
+  pull_request:
+    types:
+      - synchronize
+      - opened
+      - reopened
+  push:
+    branches:
+      - main
+      - 'releases/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+      - run: pnpm build
+
+  typecheck:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+      - run: pnpm typecheck
+
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+      - run: pnpm test
+
+  lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+      - run: pnpm lint
+
+  pass:
+    runs-on: ubuntu-20.04
+    needs:
+      - build
+      - typecheck
+      - test
+      - lint
+    steps:
+      - run: exit 0
+
+  publish:
+    runs-on: ubuntu-20.04
+    # FIXME
+    # if: github.ref == 'refs/heads/main'
+    if: false
+    needs:
+      - pass
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v2
+
+      # Ignore the value of `.node-version` because semantic-release expects v18.x.
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_RELEASE_TOKEN }}
+        run: pnpm release

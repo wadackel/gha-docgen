@@ -1,0 +1,424 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`basic > description 1`] = `
+"# Title
+
+日本語と絵文字📝
+
+<!-- gha-description-start -->
+line1  
+line2
+<!-- gha-description-end -->
+
+## Features"
+`;
+
+exports[`basic > empty 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+
+<!-- gha-outputs-end -->"
+`;
+
+exports[`basic > multi marker 1`] = `
+"# Title
+
+<!--gha-description-start-->
+line1  
+line2
+<!--gha-description-end-->
+
+<!--    gha-description-start        -->
+line1  
+line2
+<!--
+  gha-description-end
+-->
+
+## Inputs
+
+<!--gha-inputs-start-->
+### \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1
+
+### \`id2\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc2
+<!--gha-inputs-end-->
+
+<!-- gha-inputs-start   -->
+### \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1
+
+### \`id2\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc2
+<!--   gha-inputs-end -->
+
+## Outputs
+
+<!--gha-outputs-start  -->
+### \`id1\`
+
+desc1
+
+### \`id2\`
+
+desc2
+<!-- gha-outputs-end  -->
+
+<!--gha-outputs-start -->
+### \`id1\`
+
+desc1
+
+### \`id2\`
+
+desc2
+<!--gha-outputs-end -->"
+`;
+
+exports[`basic > non marker 1`] = `
+"# Title
+
+## Inputs
+
+## Outputs"
+`;
+
+exports[`style > section:h1 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+# \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1|desc1
+
+# \`id2\`
+
+**Required:** \`true\`  
+**Default:** n/a
+
+desc2  
+required
+
+# \`id3\`
+
+**Required:** \`false\`  
+**Default:** n/a  
+**Deprecated:** :warning: line1 line2
+
+desc3
+
+# \`id4\`
+
+**Required:** \`false\`  
+**Default:** \`https://gha-docgen.example\`
+
+desc3
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+# \`id1\`
+
+desc1|desc1
+
+# \`id2\`
+
+desc2  
+line2
+<!-- gha-outputs-end -->"
+`;
+
+exports[`style > section:h2 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+## \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1|desc1
+
+## \`id2\`
+
+**Required:** \`true\`  
+**Default:** n/a
+
+desc2  
+required
+
+## \`id3\`
+
+**Required:** \`false\`  
+**Default:** n/a  
+**Deprecated:** :warning: line1 line2
+
+desc3
+
+## \`id4\`
+
+**Required:** \`false\`  
+**Default:** \`https://gha-docgen.example\`
+
+desc3
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+## \`id1\`
+
+desc1|desc1
+
+## \`id2\`
+
+desc2  
+line2
+<!-- gha-outputs-end -->"
+`;
+
+exports[`style > section:h3 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+### \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1|desc1
+
+### \`id2\`
+
+**Required:** \`true\`  
+**Default:** n/a
+
+desc2  
+required
+
+### \`id3\`
+
+**Required:** \`false\`  
+**Default:** n/a  
+**Deprecated:** :warning: line1 line2
+
+desc3
+
+### \`id4\`
+
+**Required:** \`false\`  
+**Default:** \`https://gha-docgen.example\`
+
+desc3
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+### \`id1\`
+
+desc1|desc1
+
+### \`id2\`
+
+desc2  
+line2
+<!-- gha-outputs-end -->"
+`;
+
+exports[`style > section:h4 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+#### \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1|desc1
+
+#### \`id2\`
+
+**Required:** \`true\`  
+**Default:** n/a
+
+desc2  
+required
+
+#### \`id3\`
+
+**Required:** \`false\`  
+**Default:** n/a  
+**Deprecated:** :warning: line1 line2
+
+desc3
+
+#### \`id4\`
+
+**Required:** \`false\`  
+**Default:** \`https://gha-docgen.example\`
+
+desc3
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+#### \`id1\`
+
+desc1|desc1
+
+#### \`id2\`
+
+desc2  
+line2
+<!-- gha-outputs-end -->"
+`;
+
+exports[`style > section:h5 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+##### \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1|desc1
+
+##### \`id2\`
+
+**Required:** \`true\`  
+**Default:** n/a
+
+desc2  
+required
+
+##### \`id3\`
+
+**Required:** \`false\`  
+**Default:** n/a  
+**Deprecated:** :warning: line1 line2
+
+desc3
+
+##### \`id4\`
+
+**Required:** \`false\`  
+**Default:** \`https://gha-docgen.example\`
+
+desc3
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+##### \`id1\`
+
+desc1|desc1
+
+##### \`id2\`
+
+desc2  
+line2
+<!-- gha-outputs-end -->"
+`;
+
+exports[`style > section:h6 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+###### \`id1\`
+
+**Required:** \`false\`  
+**Default:** n/a
+
+desc1|desc1
+
+###### \`id2\`
+
+**Required:** \`true\`  
+**Default:** n/a
+
+desc2  
+required
+
+###### \`id3\`
+
+**Required:** \`false\`  
+**Default:** n/a  
+**Deprecated:** :warning: line1 line2
+
+desc3
+
+###### \`id4\`
+
+**Required:** \`false\`  
+**Default:** \`https://gha-docgen.example\`
+
+desc3
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+###### \`id1\`
+
+desc1|desc1
+
+###### \`id2\`
+
+desc2  
+line2
+<!-- gha-outputs-end -->"
+`;
+
+exports[`style > table 1`] = `
+"## Inputs
+
+<!-- gha-inputs-start -->
+| ID | Required | Default | Description |
+| :-- | :-- | :-- | :-- |
+| \`id1\` |  | n/a | desc1\\\\|desc1 |
+| \`id2\` | :white_check_mark: | n/a | desc2<br />required |
+| \`id3\` |  | n/a | desc3<br />:warning: **Deprecated:** line1<br />line2 |
+| \`id4\` |  | \`https://gha-docgen.example\` | desc3 |
+<!-- gha-inputs-end -->
+
+## Outputs
+
+<!-- gha-outputs-start -->
+| ID | Description |
+| :-- | :-- |
+| \`id1\` | desc1\\\\|desc1 |
+| \`id2\` | desc2<br />line2 |
+<!-- gha-outputs-end -->"
+`;

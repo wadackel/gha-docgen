@@ -1,0 +1,144 @@
+{
+  "name": "gha-docgen",
+  "version": "0.0.1",
+  "description": "Generate documentation based on the Metadata of the GitHub Action.",
+  "keywords": [
+    "github",
+    "actions",
+    "github-action",
+    "github-actions",
+    "document",
+    "generator",
+    "docgen",
+    "markdown"
+  ],
+  "homepage": "https://github.com/wadackel/gha-docgen",
+  "bugs": {
+    "url": "https://github.com/wadackel/gha-docgen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wadackel/gha-docgen.git"
+  },
+  "license": "MIT",
+  "author": "wadackel <wadackel@gmail.com>",
+  "type": "module",
+  "bin": {
+    "gha-docgen": "./dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup-node",
+    "dev": "pnpm build && node dist/bin.js",
+    "format": "run-s format:*",
+    "format:eslint": "pnpm lint --fix",
+    "format:prettier": "prettier --write .",
+    "lint": "eslint 'src/**/*.ts'",
+    "prepare": "husky install",
+    "release": "semantic-release",
+    "test": "vitest run",
+    "test:update": "pnpm run test --update",
+    "test:watch": "vitest watch",
+    "typecheck": "tsc"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,md,yml,json}": "prettier --write"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "plugins": [
+      "prettier-plugin-packagejson"
+    ],
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "import"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "never"
+        }
+      ]
+    },
+    "root": true
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ],
+    "preset": "angular"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "meow": "^11.0.0",
+    "yaml": "^2.2.1",
+    "zod": "^3.21.4",
+    "zod-error": "^1.5.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-angular": "^17.6.1",
+    "@tsconfig/esm": "^1.0.2",
+    "@tsconfig/node16": "^1.0.3",
+    "@tsconfig/strictest": "^2.0.0",
+    "@types/debug": "^4.1.7",
+    "@types/node": "^18.15.12",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.7",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "tsup": "^6.7.0",
+    "type-fest": "^3.8.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  },
+  "packageManager": "pnpm@8.3.0",
+  "tsup": {
+    "entry": [
+      "src/bin.ts"
+    ],
+    "target": "node16",
+    "minify": true,
+    "format": "esm"
+  }
+}

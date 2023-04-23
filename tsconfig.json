@@ -1,0 +1,6 @@
+{
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node16/tsconfig", "@tsconfig/esm/tsconfig"],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}

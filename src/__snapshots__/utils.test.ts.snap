@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateZodErrorMessage 1`] = `"foo ~ Expected string, received number | bar.baz ~ Expected number, received string"`;

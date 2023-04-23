@@ -1,0 +1,13 @@
+name: 'test'
+description: |
+  line1
+  line2
+
+inputs:
+  github_token:
+    description: 'The GitHub authentication token'
+    default: ${{ github.token }}
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

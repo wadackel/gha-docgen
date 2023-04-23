@@ -1,0 +1,154 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`action.yaml 1`] = `
+"# Title
+
+<!-- gha-description-start -->
+line1  
+line2
+<!-- gha-description-end -->
+
+# Inputs
+
+<!-- gha-inputs-start -->
+### \`github_token\`
+
+**Required:** \`false\`  
+**Default:** \`\${{ github.token }}\`
+
+The GitHub authentication token
+<!-- gha-inputs-end -->
+
+# Outputs
+
+<!-- gha-outputs-start -->
+
+<!-- gha-outputs-end -->"
+`;
+
+exports[`action.yml 1`] = `
+"# Title
+
+<!-- gha-description-start -->
+line1  
+line2
+<!-- gha-description-end -->
+
+# Inputs
+
+<!-- gha-inputs-start -->
+### \`github_token\`
+
+**Required:** \`false\`  
+**Default:** \`\${{ github.token }}\`
+
+The GitHub authentication token
+<!-- gha-inputs-end -->
+
+# Outputs
+
+<!-- gha-outputs-start -->
+
+<!-- gha-outputs-end -->"
+`;
+
+exports[`different paths 1`] = `
+"# Title
+
+<!-- gha-description-start -->
+line1  
+line2
+<!-- gha-description-end -->
+
+# Inputs
+
+<!-- gha-inputs-start -->
+### \`github_token\`
+
+**Required:** \`false\`  
+**Default:** \`\${{ github.token }}\`
+
+The GitHub authentication token
+<!-- gha-inputs-end -->
+
+# Outputs
+
+<!-- gha-outputs-start -->
+
+<!-- gha-outputs-end -->"
+`;
+
+exports[`different paths 2`] = `
+"# Title
+
+<!-- gha-description-start -->
+line1  
+line2
+<!-- gha-description-end -->
+
+# Inputs
+
+<!-- gha-inputs-start -->
+### \`github_token\`
+
+**Required:** \`false\`  
+**Default:** \`\${{ github.token }}\`
+
+The GitHub authentication token
+<!-- gha-inputs-end -->
+
+# Outputs
+
+<!-- gha-outputs-start -->
+
+<!-- gha-outputs-end -->"
+`;
+
+exports[`multi files 1`] = `
+"# Title
+
+<!-- gha-description-start -->
+line1  
+line2
+<!-- gha-description-end -->
+
+# Inputs
+
+<!-- gha-inputs-start -->
+### \`github_token\`
+
+**Required:** \`false\`  
+**Default:** \`\${{ github.token }}\`
+
+The GitHub authentication token
+<!-- gha-inputs-end -->
+
+# Outputs
+
+<!-- gha-outputs-start -->
+
+<!-- gha-outputs-end -->
+# Title
+
+<!-- gha-description-start -->
+line1  
+line2
+<!-- gha-description-end -->
+
+# Inputs
+
+<!-- gha-inputs-start -->
+### \`github_token\`
+
+**Required:** \`false\`  
+**Default:** \`\${{ github.token }}\`
+
+The GitHub authentication token
+<!-- gha-inputs-end -->
+
+# Outputs
+
+<!-- gha-outputs-start -->
+
+<!-- gha-outputs-end -->"
+`;

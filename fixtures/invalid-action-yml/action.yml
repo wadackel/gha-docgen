@@ -1,0 +1,14 @@
+name: 'test'
+
+# missing `description`
+# description: |
+#   line1
+#   line2
+
+inputs:
+  # invalid type
+  github_token: 'msg'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
