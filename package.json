@@ -1,6 +1,6 @@
 {
   "name": "gha-docgen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate documentation based on the Metadata of the GitHub Action.",
   "keywords": [
     "github",
