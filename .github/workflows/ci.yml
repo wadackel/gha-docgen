@@ -52,9 +52,7 @@ jobs:
 
   publish:
     runs-on: ubuntu-20.04
-    # FIXME
-    # if: github.ref == 'refs/heads/main'
-    if: false
+    if: github.ref == 'refs/heads/main'
     needs:
       - pass
     steps:
@@ -77,5 +75,5 @@ jobs:
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_RELEASE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
         run: pnpm release
