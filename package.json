@@ -1,6 +1,6 @@
 {
   "name": "gha-docgen",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Generate documentation based on the Metadata of the GitHub Action.",
   "keywords": [
     "github",
@@ -98,7 +98,8 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/npm",
-      "@semantic-release/github"
+      "@semantic-release/github",
+      "@semantic-release/git"
     ],
     "preset": "angular"
   },
