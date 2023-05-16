@@ -111,8 +111,8 @@
     "zod-error": "^1.5.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.1",
-    "@commitlint/config-angular": "17.6.1",
+    "@commitlint/cli": "17.6.3",
+    "@commitlint/config-angular": "17.6.3",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@tsconfig/esm": "1.0.3",
