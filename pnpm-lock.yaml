@@ -31,8 +31,8 @@ devDependencies:
     specifier: 10.0.1
     version: 10.0.1(semantic-release@21.0.2)
   '@tsconfig/esm':
-    specifier: 1.0.3
-    version: 1.0.3
+    specifier: 1.0.5
+    version: 1.0.5
   '@tsconfig/node16':
     specifier: 1.0.4
     version: 1.0.4
@@ -897,8 +897,9 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
-  /@tsconfig/esm@1.0.3:
-    resolution: {integrity: sha512-Gp56rIc3R8ab032nXMUitmc7YIb4nAi8DQ6Qt47tuL0Ssn9LIOm+o2FQmqPu3jX4z0TsqgzWwkmVygxcq+yHYg==}
+  /@tsconfig/esm@1.0.5:
+    resolution: {integrity: sha512-JzoZ0h299JRLPfV5VBsMq1TuMy+OmU9bdV/7NcjfRojL0eIcA1k5ESrtjWrDwJRJnk9B0QmgR0rq04LERbdfWw==}
+    deprecated: this package has been deprecated
     dev: true
 
   /@tsconfig/node10@1.0.9:
