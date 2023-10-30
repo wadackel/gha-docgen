@@ -64,7 +64,7 @@ jobs:
       - uses: pnpm/action-setup@v2
 
       # Ignore the value of `.node-version` because semantic-release expects v18.x.
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '18.x'
           cache: 'pnpm'
