@@ -15,4 +15,4 @@ jobs:
           fetch-depth: 0
       # HACK: https://github.com/conventional-changelog/commitlint/issues/3256#issuecomment-1460989769
       - run: rm -f tsconfig.json
-      - uses: wagoid/commitlint-github-action@v5
+      - uses: wagoid/commitlint-github-action@v6
