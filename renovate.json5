@@ -3,12 +3,7 @@
   // https://docs.renovatebot.com/configuration-options/
 
   // Preset configurations
-  extends: [
-    'config:js-lib',
-    ':semanticCommits',
-    ':semanticCommitTypeAll(refactor)',
-    ':semanticCommitScopeDisabled',
-  ],
+  extends: ['config:js-lib', ':semanticCommits', ':semanticCommitTypeAll(refactor)', ':semanticCommitScopeDisabled'],
 
   // Label settings
   labels: ['A-dependencies'],
