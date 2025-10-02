@@ -59,11 +59,13 @@ pnpm dev -- --debug
 ### Entry Point and Flow
 
 1. `src/bin.ts` - CLI entry point
+
    - Parses CLI arguments with meow
    - Validates flags using zod schema
    - Calls `main()` function
 
 2. `src/main.ts` - Core logic
+
    - Reads and parses action.yml (YAML)
    - Validates against action schema
    - Reads target markdown files
@@ -78,6 +80,7 @@ pnpm dev -- --debug
 ### Schema and Type Definitions
 
 - `src/schema.ts` - Type definitions using zod
+
   - `Action` type: Represents action.yml structure
   - `DocgenStyle` type: Output styles ("section:h1" ~ "section:h6", "table")
 
@@ -124,6 +127,14 @@ Outputs in table format. Newlines are converted to `<br />`, and `|` characters 
 - **debug**: Debug logging
 - **vitest**: Test execution
 - **tsup**: Build tool
+
+## Coding Standards
+
+### Comments and Documentation
+
+- Write all comments in English
+  - Inline comments, JSDoc, configuration files (JSON5, etc.)
+  - Ensures consistency and accessibility for international contributors
 
 ## Commit Message Convention
 

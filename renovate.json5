@@ -1,0 +1,69 @@
+{
+  // Renovate configuration (JSON5 format)
+  // https://docs.renovatebot.com/configuration-options/
+
+  // Preset configurations
+  extends: [
+    'config:js-lib',
+    ':semanticCommits',
+    ':semanticCommitTypeAll(refactor)',
+    ':semanticCommitScopeDisabled',
+  ],
+
+  // Label settings
+  labels: ['A-dependencies'],
+  rebaseLabel: 'S-needs-rebase',
+
+  // Set 7 days stability period for all updates (supply chain security)
+  stabilityDays: 7,
+
+  // No limit on concurrent PR creation
+  prConcurrentLimit: 0,
+
+  // Package-specific rules
+  packageRules: [
+    // Group @commitlint packages
+    {
+      groupName: 'commitlint monorepo',
+      matchPackagePatterns: ['^@commitlint/'],
+    },
+
+    // Group semantic-release packages
+    {
+      groupName: 'semantic-release monorepo',
+      matchPackagePatterns: ['^@semantic-release/', '^semantic-release$'],
+    },
+
+    // Group @tsconfig packages
+    {
+      groupName: 'tsconfig monorepo',
+      matchPackagePatterns: ['^@tsconfig/'],
+    },
+
+    // Group TypeScript ESLint packages
+    {
+      groupName: 'typescript-eslint monorepo',
+      matchPackagePatterns: ['^@typescript-eslint/'],
+    },
+
+    // Major updates are individual PRs (explicit declaration of default behavior)
+    {
+      matchUpdateTypes: ['major'],
+      groupName: null,
+    },
+
+    // Group devDependencies minor/patch updates
+    {
+      groupName: 'devDependencies (non-major)',
+      matchDepTypes: ['devDependencies'],
+      matchUpdateTypes: ['minor', 'patch'],
+    },
+
+    // Group dependencies minor/patch updates
+    {
+      groupName: 'dependencies (non-major)',
+      matchDepTypes: ['dependencies'],
+      matchUpdateTypes: ['minor', 'patch'],
+    },
+  ],
+}
