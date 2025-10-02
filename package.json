@@ -32,10 +32,9 @@
   "scripts": {
     "build": "tsup-node",
     "dev": "pnpm build && node dist/bin.js",
-    "format": "pnpm format:eslint && pnpm format:prettier",
-    "format:eslint": "pnpm lint --fix",
+    "format": "pnpm lint --fix && pnpm format:prettier",
     "format:prettier": "prettier --write .",
-    "lint": "eslint 'src/**/*.ts'",
+    "lint": "oxlint --type-aware",
     "prepare": "husky install",
     "release": "semantic-release",
     "test": "vitest run",
@@ -62,33 +61,6 @@
     "tabWidth": 2,
     "trailingComma": "all",
     "useTabs": false
-  },
-  "eslintConfig": {
-    "env": {
-      "node": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint",
-      "import"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "prettier"
-    ],
-    "rules": {
-      "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-non-null-assertion": "off",
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "never"
-        }
-      ]
-    },
-    "root": true
   },
   "release": {
     "branches": [
@@ -120,13 +92,10 @@
     "@tsconfig/strictest": "2.0.1",
     "@types/debug": "4.1.7",
     "@types/node": "18.16.0",
-    "@typescript-eslint/eslint-plugin": "5.59.0",
-    "@typescript-eslint/parser": "5.59.0",
-    "eslint": "8.40.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-import": "2.27.5",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
+    "oxlint": "1.18.0",
+    "oxlint-tsgolint": "0.2.0",
     "prettier": "2.8.8",
     "prettier-plugin-packagejson": "2.4.3",
     "semantic-release": "21.0.2",

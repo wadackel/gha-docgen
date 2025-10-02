@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import createDebug from 'debug';
 import meow from 'meow';
-import { main } from './main';
 import { docgenStyleSchema } from './schema';
 import { generateZodErrorMessage } from './utils';
+import { main } from './main';
 
 const cli = meow(
   `

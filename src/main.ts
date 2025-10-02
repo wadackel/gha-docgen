@@ -1,10 +1,10 @@
 import * as path from 'node:path';
 import type { IDebugger } from 'debug';
 import YAML from 'yaml';
-import { docgen } from './docgen';
 import type { DocgenStyle } from './schema';
 import { actionSchema } from './schema';
 import { generateZodErrorMessage, read, write } from './utils';
+import { docgen } from './docgen';
 
 export type MainOptions = {
   debug: IDebugger;
@@ -54,7 +54,7 @@ export const main = async ({ debug, cwd, ...opts }: MainOptions): Promise<void> 
     actionObj = YAML.parse(actionStr);
   } catch (e) {
     debug(e);
-    const msg = e instanceof Error ? e.message : e;
+    const msg = e instanceof Error ? e.message : String(e);
     throw new Error(`Error parsing action file: ${msg}`);
   }
 
