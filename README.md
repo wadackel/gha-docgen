@@ -27,9 +27,9 @@ $ npm install --save-dev gha-docgen
 
 I will explain how to use `gha-docgen`.
 
-The following file is assumed for the `action.yml`, which is the metadata of the Action.
+The following file is assumed for the `action.yaml`, which is the metadata of the Action.
 
-`action.yml`
+`action.yaml`
 
 ```yaml
 name: 'DEMO Action'
@@ -167,14 +167,14 @@ ARGUMENTS
   files         List of paths to markdown files. Default is "README.md".
 
 FLAGS
-  --action, -a  File path to the Metadata for the Action. Default is "action.yml" or "action.yaml".
+  --action, -a  File path to the Metadata for the Action. Default is "action.yaml" or "action.yml".
   --style, -s   Output style. Available styles are "section:h1" through "section:h6" at different heading levels, and "table". Default is "section:h3".
   --debug, -d   Enables debug output. Default is disabled.
 
 EXAMPLES
   $ gha-docgen
   $ gha-docgen docs.md
-  $ gha-docgen --action "./subdir/action.yml"
+  $ gha-docgen --action "./subdir/action.yaml"
   $ gha-docgen --style "section:h1"
   $ gha-docgen --style "section:h2"
   $ gha-docgen --style "section:h3"
@@ -245,7 +245,7 @@ First, register the `docgen` script in `package.json`. In this example, [prettie
 
 Write a step that generates documentation and returns an exit code of `0` if a diff is detected on Git:
 
-`.github/workflows/<your_workflow_name>.yml`
+`.github/workflows/<your_workflow_name>.yaml`
 
 ```yaml
 name: 'ci'
@@ -290,12 +290,12 @@ By referring to these steps, you can verify that the documentation is up-to-date
 
 [MIT © wadackel][license]
 
-[badge-build]: https://img.shields.io/github/actions/workflow/status/wadackel/gha-docgen/ci.yml?style=flat-square
+[badge-build]: https://img.shields.io/github/actions/workflow/status/wadackel/gha-docgen/ci.yaml?style=flat-square
 [badge-npm]: https://img.shields.io/npm/v/gha-docgen?style=flat-square
 [badge-license]: https://img.shields.io/github/license/wadackel/gha-docgen?style=flat-square
 [badge-prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [badge-semantic-release]: https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=flat-square
-[build]: https://github.com/wadackel/gha-docgen/actions/workflows/ci.yml
+[build]: https://github.com/wadackel/gha-docgen/actions/workflows/ci.yaml
 [npm]: https://www.npmjs.com/package/gha-docgen
 [license]: ./LICENSE
 [prettier]: https://github.com/prettier/prettier
