@@ -124,3 +124,32 @@ Outputs in table format. Newlines are converted to `<br />`, and `|` characters 
 - **debug**: Debug logging
 - **vitest**: Test execution
 - **tsup**: Build tool
+
+## Commit Message Convention
+
+This project uses **Conventional Commits** (Angular preset) enforced by commitlint.
+
+### Rules
+
+- Follow the format: `type(scope?): subject`
+- **Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, etc.
+- **Subject**: Brief description in imperative mood
+- **Body**: Optional detailed explanation
+  - **Important**: Each line must not exceed 100 characters
+  - Use multiple lines if needed to stay within the limit
+
+### Examples
+
+```bash
+# Good - body lines are under 100 characters
+docs: add CLAUDE.md for AI assistant context
+
+Add CLAUDE.md file to provide guidance to Claude Code when
+working in this repository. This includes project overview,
+development commands, architecture details, and key dependencies.
+
+# Bad - body line exceeds 100 characters
+docs: add CLAUDE.md for AI assistant context
+
+Add CLAUDE.md file to provide guidance to Claude Code when working in this repository.
+```
