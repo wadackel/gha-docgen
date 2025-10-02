@@ -1,7 +1,7 @@
-import { test, expect, describe } from 'vitest';
-import { docgen } from './docgen';
-import { createAction } from './schema.factory';
+import { describe, expect, test } from 'vitest';
 import type { DocgenStyle } from './schema';
+import { createAction } from './schema.factory';
+import { docgen } from './docgen';
 
 describe('basic', () => {
   const action = createAction({

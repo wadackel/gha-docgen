@@ -1,8 +1,8 @@
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { expect, test, vi } from 'vitest';
-import { main } from './main';
 import { read, write } from './utils';
+import { main } from './main';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
