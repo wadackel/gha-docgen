@@ -28,8 +28,8 @@ importers:
         specifier: 17.8.1
         version: 17.8.1
       '@commitlint/config-angular':
-        specifier: 17.8.1
-        version: 17.8.1
+        specifier: 20.0.0
+        version: 20.0.0
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@21.1.2(typescript@5.9.2))
@@ -104,13 +104,13 @@ packages:
     engines: {node: '>=v14'}
     hasBin: true
 
-  '@commitlint/config-angular-type-enum@17.8.1':
-    resolution: {integrity: sha512-vuIQ9rZckMPRM6I3mWzfWb7TfvE/yHJXNKaR2weuhf+lQEVSZSGQP3LwdXpMcT2QGKE9VAhU/jw0qIE0Z9EbHA==}
-    engines: {node: '>=v14'}
+  '@commitlint/config-angular-type-enum@20.0.0':
+    resolution: {integrity: sha512-6HAMnXyUl3EUBgECjvfLzlghbkMfZx28YBPDry3pPWR0+xpzqSbUY19VIkmdetqYKeawFViudvkqD4VH93gKKg==}
+    engines: {node: '>=v18'}
 
-  '@commitlint/config-angular@17.8.1':
-    resolution: {integrity: sha512-M3gfC2YttKOEDHrtOtCHfoIdF74vUc+ffJHTyU6j+xqlXrc34iOS665r1rRaTgX6CEeUAnNdpWn0zKYZTj27lA==}
-    engines: {node: '>=v14'}
+  '@commitlint/config-angular@20.0.0':
+    resolution: {integrity: sha512-vH+mHsvZl94HQNduYv7ImTSX+D+nIyMV2VQZNQq9x0Kf5kRhl4iwdNS3nDxb3KEIdaSOXtXizzsyohRfi3Bvag==}
+    engines: {node: '>=v18'}
 
   '@commitlint/config-validator@17.8.1':
     resolution: {integrity: sha512-UUgUC+sNiiMwkyiuIFR7JG2cfd9t/7MV8VB4TZ+q02ZFkHoduUS4tJGsCBWvBOGD9Btev6IecPMvlWUfJorkEA==}
@@ -2751,11 +2751,11 @@ snapshots:
       - '@swc/core'
       - '@swc/wasm'
 
-  '@commitlint/config-angular-type-enum@17.8.1': {}
+  '@commitlint/config-angular-type-enum@20.0.0': {}
 
-  '@commitlint/config-angular@17.8.1':
+  '@commitlint/config-angular@20.0.0':
     dependencies:
-      '@commitlint/config-angular-type-enum': 17.8.1
+      '@commitlint/config-angular-type-enum': 20.0.0
 
   '@commitlint/config-validator@17.8.1':
     dependencies:
