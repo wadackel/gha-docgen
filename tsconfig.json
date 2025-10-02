@@ -1,6 +1,11 @@
 {
-  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node16/tsconfig", "@tsconfig/esm/tsconfig"],
+  "extends": [
+    "@tsconfig/strictest/tsconfig",
+    "@tsconfig/node16/tsconfig",
+    "@tsconfig/esm/tsconfig"
+  ],
   "compilerOptions": {
     "noEmit": true
-  }
+  },
+  "exclude": ["dist"]
 }
