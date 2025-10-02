@@ -32,7 +32,7 @@
   "scripts": {
     "build": "tsup-node",
     "dev": "pnpm build && node dist/bin.js",
-    "format": "run-s format:*",
+    "format": "pnpm format:eslint && pnpm format:prettier",
     "format:eslint": "pnpm lint --fix",
     "format:prettier": "prettier --write .",
     "lint": "eslint 'src/**/*.ts'",
@@ -127,7 +127,6 @@
     "eslint-plugin-import": "2.27.5",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
-    "npm-run-all": "4.1.5",
     "prettier": "2.8.8",
     "prettier-plugin-packagejson": "2.4.3",
     "semantic-release": "21.0.2",
