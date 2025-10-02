@@ -81,7 +81,7 @@
     "@types/debug": "4.1.12",
     "@types/node": "18.19.127",
     "husky": "8.0.3",
-    "lint-staged": "13.3.0",
+    "lint-staged": "16.2.0",
     "oxlint": "1.18.0",
     "oxlint-tsgolint": "0.2.0",
     "prettier": "2.8.8",
