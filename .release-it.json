@@ -3,6 +3,9 @@
     "commitMessage": "build: release v${version}",
     "requireBranch": "main"
   },
+  "hooks": {
+    "after:bump": "pnpm build"
+  },
   "npm": {
     "skipChecks": true
   },
