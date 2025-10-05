@@ -49,7 +49,7 @@
     "meow": "^14.0.0",
     "type-fest": "^5.0.1",
     "yaml": "^2.2.1",
-    "zod": "^3.21.4",
+    "zod": "^4.0.0",
     "zod-error": "^1.5.0"
   },
   "devDependencies": {
