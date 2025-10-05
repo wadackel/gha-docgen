@@ -24,7 +24,7 @@ test('generateZodErrorMessage', () => {
     throw new Error();
   }
 
-  expect(generateZodErrorMessage(res.error.issues)).toMatchSnapshot();
+  expect(generateZodErrorMessage(res.error)).toMatchSnapshot();
 });
 
 /**

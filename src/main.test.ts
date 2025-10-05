@@ -123,7 +123,7 @@ test('invalid action.yml schema', async () => {
       style: 'section:h3',
     }),
   ).rejects.toThrowError(
-    'Error parsing action file: description ~ Required | inputs.github_token ~ Expected object, received string',
+    'Error parsing action file: Invalid input: expected string, received undefined at "description" | Invalid input: expected object, received string at "inputs.github_token"',
   );
 });
 
