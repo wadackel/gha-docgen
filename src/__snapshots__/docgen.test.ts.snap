@@ -407,7 +407,7 @@ exports[`style > table 1`] = `
 <!-- gha-inputs-start -->
 | ID | Required | Default | Description |
 | :-- | :-- | :-- | :-- |
-| \`id1\` |  | n/a | desc1\\\\|desc1 |
+| \`id1\` |  | n/a | desc1\\|desc1 |
 | \`id2\` | :white_check_mark: | n/a | desc2<br />required |
 | \`id3\` |  | n/a | desc3<br />:warning: **Deprecated:** line1<br />line2 |
 | \`id4\` |  | \`https://gha-docgen.example\` | desc3 |
@@ -418,7 +418,7 @@ exports[`style > table 1`] = `
 <!-- gha-outputs-start -->
 | ID | Description |
 | :-- | :-- |
-| \`id1\` | desc1\\\\|desc1 |
+| \`id1\` | desc1\\|desc1 |
 | \`id2\` | desc2<br />line2 |
 <!-- gha-outputs-end -->"
 `;
