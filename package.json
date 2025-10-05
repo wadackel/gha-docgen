@@ -56,7 +56,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "17.8.1",
-    "@commitlint/config-angular": "17.8.1",
+    "@commitlint/config-angular": "20.0.0",
     "@release-it/conventional-changelog": "10.0.1",
     "@tsconfig/esm": "1.0.5",
     "@tsconfig/node16": "1.0.4",
