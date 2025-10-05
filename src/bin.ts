@@ -37,17 +37,17 @@ EXAMPLES
     flags: {
       action: {
         type: 'string',
-        alias: 'a',
+        shortFlag: 'a',
       },
       style: {
         type: 'string',
         default: 'section:h3',
-        alias: 's',
+        shortFlag: 's',
       },
       debug: {
         type: 'boolean',
         default: false,
-        alias: 'd',
+        shortFlag: 'd',
       },
     },
   },
