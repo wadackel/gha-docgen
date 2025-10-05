@@ -140,7 +140,7 @@ This project uses **Conventional Commits** (Angular preset) enforced by commitli
 ### Rules
 
 - Follow the format: `type(scope?): subject`
-- **Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, etc.
+- **Types**: `build`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test`
 - **Subject**: Brief description in imperative mood
 - **Body**: Optional detailed explanation
   - **Important**: Each line must not exceed 100 characters
