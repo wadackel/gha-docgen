@@ -133,31 +133,28 @@ Outputs in table format. Newlines are converted to `<br />`, and `|` characters 
   - Inline comments, JSDoc, configuration files (JSON5, etc.)
   - Ensures consistency and accessibility for international contributors
 
-## Commit Message Convention
+## Versioning and Release
 
-This project uses **Conventional Commits** (Angular preset) enforced by commitlint.
+This project uses **Changesets** for version management and releases.
 
-### Rules
+### Workflow
 
-- Follow the format: `type(scope?): subject`
-- **Types**: `build`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test`
-- **Subject**: Brief description in imperative mood
-- **Body**: Optional detailed explanation
-  - **Important**: Each line must not exceed 100 characters
-  - Use multiple lines if needed to stay within the limit
+1. **Make changes** to the codebase
+2. **Create a changeset** with `pnpm changeset`
+   - Select the version bump type (major/minor/patch)
+   - Write a summary of the changes
+3. **Commit the changeset file** along with your changes
+4. When merged to `main`, changesets/action creates a "Version Packages" PR
+5. Merging the Version Packages PR triggers automatic npm publish and GitHub Release
 
-### Examples
+### Changeset Types
 
-```bash
-# Good - body lines are under 100 characters
-docs: add CLAUDE.md for AI assistant context
+- **major**: Breaking changes (e.g., API changes, removed features)
+- **minor**: New features (backward compatible)
+- **patch**: Bug fixes and minor improvements
 
-Add CLAUDE.md file to provide guidance to Claude Code when
-working in this repository. This includes project overview,
-development commands, architecture details, and key dependencies.
+### Notes
 
-# Bad - body line exceeds 100 characters
-docs: add CLAUDE.md for AI assistant context
-
-Add CLAUDE.md file to provide guidance to Claude Code when working in this repository.
-```
+- Commit messages are not strictly enforced, but clear messages are encouraged
+- Version determination is based on changeset files, not commit messages
+- Multiple changesets can be accumulated before release
