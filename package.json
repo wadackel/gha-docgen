@@ -31,21 +31,18 @@
   ],
   "scripts": {
     "build": "tsdown",
+    "changeset": "changeset",
     "dev": "pnpm build && node dist/bin.js",
     "format": "pnpm lint --fix && pnpm format:prettier",
     "format:prettier": "prettier --write .",
     "lint": "oxlint --type-aware",
     "prepare": "lefthook install",
-    "release": "release-it",
+    "release": "pnpm build && changeset publish",
     "test": "vitest run",
     "test:update": "pnpm run test --update",
     "test:watch": "vitest watch",
-    "typecheck": "tsc"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-angular"
-    ]
+    "typecheck": "tsc",
+    "version": "changeset version"
   },
   "dependencies": {
     "debug": "^4.3.4",
@@ -55,9 +52,7 @@
     "zod-error": "^1.5.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.8.1",
-    "@commitlint/config-angular": "17.8.1",
-    "@release-it/conventional-changelog": "10.0.1",
+    "@changesets/cli": "^2.29.7",
     "@tsconfig/esm": "1.0.5",
     "@tsconfig/node16": "1.0.4",
     "@tsconfig/strictest": "2.0.6",
@@ -68,7 +63,6 @@
     "oxlint-tsgolint": "0.2.0",
     "prettier": "3.6.2",
     "prettier-plugin-packagejson": "2.5.19",
-    "release-it": "19.0.5",
     "tsdown": "^0.15.6",
     "type-fest": "3.13.1",
     "typescript": "5.9.2",

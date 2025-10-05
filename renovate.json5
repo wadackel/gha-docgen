@@ -17,18 +17,6 @@
 
   // Package-specific rules
   packageRules: [
-    // Group @commitlint packages
-    {
-      groupName: 'commitlint monorepo',
-      matchPackagePatterns: ['^@commitlint/'],
-    },
-
-    // Group semantic-release packages
-    {
-      groupName: 'semantic-release monorepo',
-      matchPackagePatterns: ['^@semantic-release/', '^semantic-release$'],
-    },
-
     // Group @tsconfig packages
     {
       groupName: 'tsconfig monorepo',
