@@ -200,3 +200,6 @@ $RECYCLE.BIN/
 # Lefthook local configuration
 lefthook-local.yml
 lefthook-local.yaml
+
+# npm configuration (created by release-it in CI)
+.npmrc

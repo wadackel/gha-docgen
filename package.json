@@ -36,7 +36,7 @@
     "format:prettier": "prettier --write .",
     "lint": "oxlint --type-aware",
     "prepare": "lefthook install",
-    "release": "semantic-release",
+    "release": "release-it",
     "test": "vitest run",
     "test:update": "pnpm run test --update",
     "test:watch": "vitest watch",
@@ -46,19 +46,6 @@
     "extends": [
       "@commitlint/config-angular"
     ]
-  },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      "@semantic-release/github",
-      "@semantic-release/git"
-    ],
-    "preset": "angular"
   },
   "dependencies": {
     "debug": "^4.3.4",
@@ -70,8 +57,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.8.1",
     "@commitlint/config-angular": "17.8.1",
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
+    "@release-it/conventional-changelog": "10.0.1",
     "@tsconfig/esm": "1.0.5",
     "@tsconfig/node16": "1.0.4",
     "@tsconfig/strictest": "2.0.6",
@@ -82,13 +68,17 @@
     "oxlint-tsgolint": "0.2.0",
     "prettier": "3.6.2",
     "prettier-plugin-packagejson": "2.5.19",
-    "semantic-release": "21.1.2",
+    "release-it": "19.0.5",
     "tsdown": "^0.15.6",
     "type-fest": "3.13.1",
     "typescript": "5.9.2",
     "vitest": "0.34.6"
   },
   "packageManager": "pnpm@10.17.1",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "tsdown": {
     "entry": [
       "src/bin.ts"
