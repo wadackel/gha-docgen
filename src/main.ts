@@ -61,7 +61,7 @@ export const main = async ({ debug, cwd, ...opts }: MainOptions): Promise<void> 
   const action = actionSchema.safeParse(actionObj);
   if (!action.success) {
     debug('action schema error: %s', action.error);
-    throw new Error(`Error parsing action file: ${generateZodErrorMessage(action.error.issues)}`);
+    throw new Error(`Error parsing action file: ${generateZodErrorMessage(action.error)}`);
   }
 
   // Read markdown files

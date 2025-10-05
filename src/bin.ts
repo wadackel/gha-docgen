@@ -62,7 +62,7 @@ try {
 
   const style = docgenStyleSchema.safeParse(cli.flags.style);
   if (!style.success) {
-    throw new Error(`Error invalid "--style" flag value: ${generateZodErrorMessage(style.error.issues)}`);
+    throw new Error(`Error invalid "--style" flag value: ${generateZodErrorMessage(style.error)}`);
   }
 
   await main({

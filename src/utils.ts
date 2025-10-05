@@ -1,6 +1,6 @@
 import * as fs from 'node:fs/promises';
-import type { ZodIssue } from 'zod';
-import { generateErrorMessage } from 'zod-error';
+import type { ZodError } from 'zod';
+import { fromZodError } from 'zod-validation-error';
 
 /**
  * Filesystem
@@ -26,21 +26,12 @@ export const write = async (filepath: string, data: string): Promise<Error | nul
 /**
  * Error handling
  */
-export const generateZodErrorMessage = (issues: ZodIssue[]): string => {
-  return generateErrorMessage(issues, {
-    code: {
-      enabled: false,
-    },
-    message: {
-      enabled: true,
-      label: '',
-    },
-    path: {
-      enabled: true,
-      type: 'objectNotation',
-      label: '',
-    },
-  });
+export const generateZodErrorMessage = (error: ZodError): string => {
+  return fromZodError(error, {
+    prefix: undefined,
+    issueSeparator: ' | ',
+    unionSeparator: ' OR ',
+  }).toString();
 };
 
 /**
