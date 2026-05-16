@@ -206,3 +206,7 @@ lefthook-local.yaml
 
 # npm configuration (created by release-it in CI)
 .npmrc
+
+# mise local overrides
+mise.local.toml
+.mise.local.toml
