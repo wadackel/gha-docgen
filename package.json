@@ -3,38 +3,42 @@
   "version": "2.0.0",
   "description": "Generate documentation based on the Metadata of the GitHub Action.",
   "keywords": [
-    "github",
     "actions",
-    "github-action",
-    "github-actions",
+    "docgen",
     "document",
     "generator",
-    "docgen",
+    "github",
+    "github-action",
+    "github-actions",
     "markdown"
   ],
   "homepage": "https://github.com/wadackel/gha-docgen",
   "bugs": {
     "url": "https://github.com/wadackel/gha-docgen/issues"
   },
+  "license": "MIT",
+  "author": "wadackel <wadackel@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/wadackel/gha-docgen.git"
   },
-  "license": "MIT",
-  "author": "wadackel <wadackel@gmail.com>",
-  "type": "module",
   "bin": {
     "gha-docgen": "./dist/bin.js"
   },
   "files": [
     "dist"
   ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "tsdown",
     "changeset": "changeset",
     "dev": "pnpm build && node dist/bin.js",
-    "format": "pnpm lint --fix && pnpm format:prettier",
-    "format:prettier": "prettier --write .",
+    "format": "pnpm lint --fix && pnpm format:write",
+    "format:write": "oxfmt",
     "lint": "oxlint --type-aware",
     "prepare": "lefthook install",
     "release": "pnpm build && changeset publish",
@@ -59,24 +63,19 @@
     "@types/debug": "4.1.12",
     "@types/node": "20.19.24",
     "lefthook": "2.0.2",
-    "oxlint": "1.25.0",
-    "oxlint-tsgolint": "0.4.0",
-    "prettier": "3.6.2",
-    "prettier-plugin-packagejson": "2.5.19",
+    "oxfmt": "0.48.0",
+    "oxlint": "1.63.0",
+    "oxlint-tsgolint": "0.22.1",
     "tsdown": "0.15.12",
     "typescript": "5.9.3",
     "vitest": "4.0.6"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
   },
   "tsdown": {
     "entry": [
       "src/bin.ts"
     ],
-    "target": "node20",
+    "format": "esm",
     "minify": true,
-    "format": "esm"
+    "target": "node20"
   }
 }

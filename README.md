@@ -3,7 +3,6 @@
 [![Build][badge-build]][build]
 [![npm][badge-npm]][npm]
 [![MIT LICENSE][badge-license]][license]
-[![code style: prettier][badge-prettier]][prettier]
 [![semantic-release: angular][badge-semantic-release]][semantic-release]
 
 `gha-docgen` generates documentation based on the [metadata](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions) of a GitHub Action, such as `action.yml`. To limit partial output, you can freely customize the document style at any time. Maintain flexibility while providing documentation driven by Metadata, and always offer consistent documentation to users.
@@ -231,14 +230,14 @@ I will introduce a GitHub Actions Workflow to ensure that the documentation is a
 
 In this example, the status will fail if the contents of `action.yml` are updated, but the remote repository is updated without running `gha-docgen`.
 
-First, register the `docgen` script in `package.json`. In this example, [prettier][prettier] is used, but the use of prettier is optional. However, using formatters like prettier is recommended.
+First, register the `docgen` script in `package.json`. In this example, a Markdown formatter is chained after `gha-docgen` so the generated documentation stays consistent with your repository's formatting style. Using a formatter is optional but recommended.
 
 `package.json`
 
 ```json
 {
   "scripts": {
-    "docgen": "gha-docgen && prettier --write README.md"
+    "docgen": "gha-docgen && <your-formatter> README.md"
   }
 }
 ```
@@ -293,10 +292,8 @@ By referring to these steps, you can verify that the documentation is up-to-date
 [badge-build]: https://img.shields.io/github/actions/workflow/status/wadackel/gha-docgen/ci.yaml?style=flat-square
 [badge-npm]: https://img.shields.io/npm/v/gha-docgen?style=flat-square
 [badge-license]: https://img.shields.io/github/license/wadackel/gha-docgen?style=flat-square
-[badge-prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [badge-semantic-release]: https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=flat-square
 [build]: https://github.com/wadackel/gha-docgen/actions/workflows/ci.yaml
 [npm]: https://www.npmjs.com/package/gha-docgen
 [license]: ./LICENSE
-[prettier]: https://github.com/prettier/prettier
 [semantic-release]: https://github.com/semantic-release/semantic-release
