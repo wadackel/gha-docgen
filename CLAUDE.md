@@ -43,7 +43,7 @@ pnpm typecheck
 # Lint
 pnpm lint
 
-# Format (lint fix + prettier)
+# Format (lint fix + oxfmt)
 pnpm format
 ```
 
