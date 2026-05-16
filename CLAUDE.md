@@ -7,6 +7,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 `gha-docgen` is a CLI tool that automatically generates Markdown documentation from GitHub Actions metadata (action.yml).
 It searches for specific comment sections in README.md (`<!-- gha-{description|inputs|outputs}-{start|end} -->`) and replaces them with content from action.yml.
 
+## Prerequisites
+
+Tool versions (Node.js, pnpm) are managed by [mise](https://mise.jdx.dev/). Install mise (e.g. `brew install mise` or `curl https://mise.run | sh`), then bootstrap the toolchain:
+
+```bash
+mise install
+```
+
+Other mise-compatible runtime managers may also read `mise.toml`'s tool versions, but mise is the supported path for both local development and CI.
+
 ## Commands
 
 ### Development Commands
