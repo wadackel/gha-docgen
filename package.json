@@ -61,7 +61,7 @@
     "@tsconfig/node20": "20.1.6",
     "@tsconfig/strictest": "2.0.7",
     "@types/debug": "4.1.12",
-    "@types/node": "20.19.24",
+    "@types/node": "24.13.3",
     "lefthook": "2.0.2",
     "oxfmt": "0.48.0",
     "oxlint": "1.63.0",
