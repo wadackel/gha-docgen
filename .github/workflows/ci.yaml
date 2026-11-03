@@ -15,8 +15,8 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-      - uses: ./.github/actions/setup-node
+      - uses: actions/checkout@v5.0.0
+      - uses: $/.github/actions/setup-node
       - run: pnpm build
       - run: pnpm typecheck
       - run: pnpm test
@@ -32,17 +32,17 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/checkout@v5.0.0
         with:
           fetch-depth: 0
 
-      - uses: ./.github/actions/setup-node
+      - uses: $/.github/actions/setup-node
 
       - name: Upgrade npm for trusted publishing
         run: npm install -g npm@latest
 
       - name: Create Release Pull Request or Publish
-        uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba # v1.5.3
+        uses: changesets/action@v1.5.3
         with:
           publish: pnpm release
           commit: 'chore: version packages'
